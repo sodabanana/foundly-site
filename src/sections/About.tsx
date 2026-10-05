@@ -1,7 +1,12 @@
 import { cn } from '@/lib/utils';
 import { useScrollAnimation, useStaggerAnimation } from '@/hooks/useScrollAnimation';
 import { aboutConfig } from '@/i18n';
-import { Hl } from '@/components/Highlight';
+
+const PILLAR_COLORS: Record<string, string> = {
+  look: '#0284C7',
+  found: '#65A30D',
+  grow: '#EA580C',
+};
 
 export function About() {
   if (!aboutConfig.description && aboutConfig.stats.length === 0 && aboutConfig.images.length === 0) return null;
@@ -14,7 +19,7 @@ export function About() {
       <div className="container-large px-6 lg:px-12">
         <div ref={sectionRef} className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left Column - Text Content */}
-          <div className="space-y-8">
+          <div>
             {/* Section Label */}
             {aboutConfig.label && (
               <div
@@ -29,11 +34,11 @@ export function About() {
               </div>
             )}
 
-            {/* Value Proposition — enlarged & bold */}
+            {/* Value Proposition — bold statement, compact size */}
             {(aboutConfig.valueProp || aboutConfig.valuePropAccent) && (
               <h2
                 className={cn(
-                  'text-3xl md:text-4xl lg:text-[2.9rem] font-black text-exvia-black leading-[1.15] tracking-[-0.02em] transition-all duration-800 ease-out-quart',
+                  'mt-5 text-2xl md:text-[1.75rem] lg:text-3xl font-black text-exvia-black leading-[1.3] tracking-[-0.01em] transition-all duration-800 ease-out-quart',
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
                 style={{ transitionDelay: '80ms' }}
@@ -51,7 +56,7 @@ export function About() {
             {aboutConfig.lead && (
               <p
                 className={cn(
-                  'text-base font-medium text-exvia-black/70 transition-all duration-800 ease-out-quart',
+                  'mt-4 text-base font-medium text-exvia-black/70 transition-all duration-800 ease-out-quart',
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
                 style={{ transitionDelay: '140ms' }}
@@ -60,18 +65,43 @@ export function About() {
               </p>
             )}
 
-            {/* System description with FOUND / LOOK / GROW highlights */}
+            {/* System description */}
             {aboutConfig.description && (
-              <div
+              <p
                 className={cn(
-                  'transition-all duration-800 ease-out-quart',
+                  'mt-3 text-base text-exvia-black/60 leading-relaxed transition-all duration-800 ease-out-quart',
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
-                style={{ transitionDelay: '200ms' }}
+                style={{ transitionDelay: '180ms' }}
               >
-                <p className="text-xl lg:text-2xl text-exvia-black leading-relaxed">
-                  <Hl text={aboutConfig.description} />
-                </p>
+                {aboutConfig.description}
+              </p>
+            )}
+
+            {/* Three pillars — LOOK / FOUND / GROW, aligned columns */}
+            {aboutConfig.pillars?.length > 0 && (
+              <div className="mt-10 grid sm:grid-cols-3 gap-6">
+                {aboutConfig.pillars.map((pillar, index) => (
+                  <div
+                    key={pillar.key}
+                    className={cn(
+                      'border-t-2 pt-5 transition-all duration-700 ease-out-quart',
+                      sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                    )}
+                    style={{
+                      borderTopColor: PILLAR_COLORS[pillar.key],
+                      transitionDelay: `${240 + index * 90}ms`,
+                    }}
+                  >
+                    <span className={cn('block text-2xl font-black tracking-[-0.02em]', `kw-${pillar.key}`)}>
+                      {pillar.name}
+                    </span>
+                    <span className="block mt-1.5 text-xs font-geist-mono uppercase tracking-wider text-exvia-black/50">
+                      {pillar.scope}
+                    </span>
+                    <p className="mt-3 text-sm text-exvia-black/70 leading-relaxed">{pillar.desc}</p>
+                  </div>
+                ))}
               </div>
             )}
 
@@ -79,16 +109,16 @@ export function About() {
             {aboutConfig.experienceValue && (
               <div
                 className={cn(
-                  'flex items-end gap-3 pt-4 transition-all duration-800 ease-out-quart',
+                  'flex items-end gap-3 mt-12 transition-all duration-800 ease-out-quart',
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
-                style={{ transitionDelay: '280ms' }}
+                style={{ transitionDelay: '300ms' }}
               >
-                <span className="text-7xl lg:text-8xl font-black text-exvia-black leading-none">
+                <span className="text-6xl lg:text-7xl font-black text-exvia-black leading-none">
                   {aboutConfig.experienceValue}
                 </span>
                 {aboutConfig.experienceLabel && (
-                  <span className="text-sm text-exvia-black/60 pb-3 whitespace-pre-line">
+                  <span className="text-sm text-exvia-black/60 pb-2 whitespace-pre-line">
                     {aboutConfig.experienceLabel}
                   </span>
                 )}
@@ -99,7 +129,7 @@ export function About() {
             {aboutConfig.stats.length > 0 && (
               <div
                 className={cn(
-                  'grid grid-cols-3 gap-8 pt-8 border-t border-exvia-border transition-all duration-800 ease-out-quart',
+                  'grid grid-cols-3 gap-8 mt-8 pt-8 border-t border-exvia-border transition-all duration-800 ease-out-quart',
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
                 style={{ transitionDelay: '360ms' }}

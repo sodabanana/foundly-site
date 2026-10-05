@@ -156,7 +156,7 @@
     letter-spacing: -0.01em;
   }
 
-  /* FOUND / LOOK / GROW keyword system — each service owns a color + typeface */
+  /* FOUND / LOOK / GROW keyword system — same bold font, one color each */
   .kw-found {
     color: #65A30D;
     font-weight: 900;
@@ -164,15 +164,13 @@
   }
   .kw-look {
     color: #0284C7;
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 1.08em;
+    font-weight: 900;
+    letter-spacing: -0.02em;
   }
   .kw-grow {
     color: #EA580C;
-    font-family: 'GeistMono', 'Courier New', monospace;
-    font-weight: 700;
+    font-weight: 900;
+    letter-spacing: -0.02em;
   }
   
   /* Text clamp utilities */

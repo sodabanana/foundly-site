@@ -36,12 +36,20 @@ export interface AboutImage {
   alt: string;
 }
 
+export interface AboutPillar {
+  key: 'found' | 'look' | 'grow';
+  name: string;
+  scope: string;
+  desc: string;
+}
+
 export interface AboutConfig {
   label: string;
   valueProp: string;
   valuePropAccent: string;
   lead: string;
   description: string;
+  pillars: AboutPillar[];
   experienceValue: string;
   experienceLabel: string;
   stats: AboutStat[];
@@ -192,8 +200,27 @@ const zh: Content = {
     valueProp: "店再好，搜不到、刷不到，",
     valuePropAccent: "就等于不存在。",
     lead: "FOUNDLY 是一家扎根新加坡的 Local Growth Studio。",
-    description:
-      "我们把 FOUND（SEO·GEO 搜索可见）、LOOK（品牌网站门面）、GROW（社媒引流获客）做成一套增长系统——帮你在 Google 第一屏被搜到、在社媒被刷到、在 AI 搜索里被点名，最终把线上流量变成走进店里的客。",
+    description: "三个服务，一套增长系统——按你店的阶段，可以只做一项，也可以三项一起跑。",
+    pillars: [
+      {
+        key: "look",
+        name: "LOOK",
+        scope: "品牌网站门面",
+        desc: "服务项目、地址导航、真实门店图、顾客评价——搜到你的人，3 秒内决定走进来。",
+      },
+      {
+        key: "found",
+        name: "FOUND",
+        scope: "SEO·GEO 搜索可见",
+        desc: "在 Google 第一屏被搜到，在 ChatGPT 等 AI 搜索里被点名。",
+      },
+      {
+        key: "grow",
+        name: "GROW",
+        scope: "社媒引流获客",
+        desc: "在 IG / TikTok / 小红书被本地人刷到，把曝光变成到店客流。",
+      },
+    ],
     experienceValue: "120+",
     experienceLabel: "家实体店\n被找到",
     stats: [
@@ -211,22 +238,22 @@ const zh: Content = {
   },
   services: {
     label: "The FOUNDLY System · 服务体系",
-    heading: "先被找到，再有门面，然后获得到客",
-    headingParts: ["先被找到", "，再有门面", "，然后获得到客"],
+    heading: "先有门面，再被找到，然后获得到客",
+    headingParts: ["先有门面", "，再被找到", "，然后获得到客"],
     services: [
-      {
-        iconName: "Search",
-        title: "FOUND · 被找到",
-        description:
-          "SEO + GEO + Local Search。Google 排名与地图优化，外加 ChatGPT / Perplexity / Gemini 等 AI 搜索可见度建设——客户搜你时，你在第一屏；AI 推荐时，你的店被点名。",
-        image: "/images/service-1.jpg",
-      },
       {
         iconName: "Palette",
         title: "LOOK · 有门面",
         description:
           "Website + Brand Presence。为实体店打造品牌官网：服务项目、门店地址与导航、真实环境图、顾客评价、WhatsApp 一键预约——搜到你的人，3 秒内决定走进来。",
         image: "/images/service-2.jpg",
+      },
+      {
+        iconName: "Search",
+        title: "FOUND · 被找到",
+        description:
+          "SEO + GEO + Local Search。Google 排名与地图优化，外加 ChatGPT / Perplexity / Gemini 等 AI 搜索可见度建设——客户搜你时，你在第一屏；AI 推荐时，你的店被点名。",
+        image: "/images/service-1.jpg",
       },
       {
         iconName: "TrendingUp",
@@ -443,8 +470,27 @@ const en: Content = {
     valueProp: "A great store that can't be searched or scrolled to ",
     valuePropAccent: "might as well not exist.",
     lead: "FOUNDLY is a Local Growth Studio rooted in Singapore.",
-    description:
-      "We built one growth system — FOUND (SEO·GEO visibility), LOOK (your website storefront), GROW (social traffic & customer acquisition) — to put you on page one of Google, into local feeds, and into AI answers, turning online traffic into customers walking through your door.",
+    description: "Three services, one growth system — start with one, or run all three together.",
+    pillars: [
+      {
+        key: "look",
+        name: "LOOK",
+        scope: "Website & Brand Presence",
+        desc: "Services, directions, real photos, reviews — visitors decide to walk in within 3 seconds.",
+      },
+      {
+        key: "found",
+        name: "FOUND",
+        scope: "SEO·GEO Visibility",
+        desc: "On page one of Google, named in AI answers like ChatGPT.",
+      },
+      {
+        key: "grow",
+        name: "GROW",
+        scope: "Social & Customer Acquisition",
+        desc: "Seen by locals on IG / TikTok / Xiaohongshu — exposure turned into foot traffic.",
+      },
+    ],
     experienceValue: "120+",
     experienceLabel: "local stores\nget found",
     stats: [
@@ -462,22 +508,22 @@ const en: Content = {
   },
   services: {
     label: "The FOUNDLY System",
-    heading: "Get found. Look great. Get customers.",
-    headingParts: ["Get found.", " Look great.", " Get customers."],
+    heading: "Look great. Get found. Get customers.",
+    headingParts: ["Look great.", " Get found.", " Get customers."],
     services: [
-      {
-        iconName: "Search",
-        title: "FOUND · Get Found",
-        description:
-          "SEO + GEO + Local Search. Google rankings and Maps optimization, plus visibility across AI search — ChatGPT, Perplexity, Gemini. When customers search, you're on page one; when AI recommends, your store gets named.",
-        image: "/images/service-1.jpg",
-      },
       {
         iconName: "Palette",
         title: "LOOK · Look Great",
         description:
           "Website + Brand Presence. A brand website for your store: services, address & directions, real photos, customer reviews, one-tap WhatsApp booking — visitors decide to walk in within 3 seconds.",
         image: "/images/service-2.jpg",
+      },
+      {
+        iconName: "Search",
+        title: "FOUND · Get Found",
+        description:
+          "SEO + GEO + Local Search. Google rankings and Maps optimization, plus visibility across AI search — ChatGPT, Perplexity, Gemini. When customers search, you're on page one; when AI recommends, your store gets named.",
+        image: "/images/service-1.jpg",
       },
       {
         iconName: "TrendingUp",
