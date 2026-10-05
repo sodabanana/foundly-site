@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { useServiceParallax } from '@/hooks/useMouseParallax';
 import { servicesConfig } from '@/i18n';
+import { Hl } from '@/components/Highlight';
 import * as LucideIcons from 'lucide-react';
 
 function getIcon(iconName: string): ElementType {
@@ -14,6 +15,8 @@ interface ServiceCardProps {
   service: { iconName: string; title: string; description: string; image: string };
   index: number;
 }
+
+const SERVICE_KEYS = ['found', 'look', 'grow'] as const;
 
 function ServiceCard({ service, index }: ServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false);
@@ -40,7 +43,9 @@ function ServiceCard({ service, index }: ServiceCardProps) {
 
         {/* Content */}
         <div className="flex-1 space-y-3">
-          <h3 className="text-h5 font-semibold text-exvia-black">{service.title}</h3>
+          <h3 className="text-h5 font-semibold text-exvia-black">
+            <Hl text={service.title} />
+          </h3>
           <p className="text-sm text-exvia-black/60 leading-relaxed max-w-md">
             {service.description}
           </p>
@@ -77,6 +82,11 @@ export function Services() {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.3 });
   const { ref: servicesRef, isVisible: servicesVisible } = useScrollAnimation({ threshold: 0.1 });
 
+  const headingParts =
+    servicesConfig.headingParts?.length === 3
+      ? servicesConfig.headingParts
+      : [servicesConfig.heading, '', ''];
+
   return (
     <section id="services" className="w-full py-24 lg:py-32 bg-white">
       <div className="container-large px-6 lg:px-12">
@@ -103,7 +113,13 @@ export function Services() {
               )}
               style={{ transitionDelay: '100ms' }}
             >
-              {servicesConfig.heading}
+              {headingParts.map((part, i) =>
+                part ? (
+                  <span key={i} className={cn(i < 3 && `kw-${SERVICE_KEYS[i]}`)}>
+                    {part}
+                  </span>
+                ) : null
+              )}
             </h2>
           )}
         </div>

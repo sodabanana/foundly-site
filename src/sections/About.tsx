@@ -1,7 +1,7 @@
-import { } from 'react';
 import { cn } from '@/lib/utils';
 import { useScrollAnimation, useStaggerAnimation } from '@/hooks/useScrollAnimation';
 import { aboutConfig } from '@/i18n';
+import { Hl } from '@/components/Highlight';
 
 export function About() {
   if (!aboutConfig.description && aboutConfig.stats.length === 0 && aboutConfig.images.length === 0) return null;
@@ -29,17 +29,48 @@ export function About() {
               </div>
             )}
 
-            {/* Main Text */}
+            {/* Value Proposition — enlarged & bold */}
+            {(aboutConfig.valueProp || aboutConfig.valuePropAccent) && (
+              <h2
+                className={cn(
+                  'text-3xl md:text-4xl lg:text-[2.9rem] font-black text-exvia-black leading-[1.15] tracking-[-0.02em] transition-all duration-800 ease-out-quart',
+                  sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                )}
+                style={{ transitionDelay: '80ms' }}
+              >
+                {aboutConfig.valueProp}
+                {aboutConfig.valuePropAccent && (
+                  <span className="bg-[linear-gradient(to_top,rgba(215,255,62,0.85)_42%,transparent_42%)] px-1">
+                    {aboutConfig.valuePropAccent}
+                  </span>
+                )}
+              </h2>
+            )}
+
+            {/* Lead line */}
+            {aboutConfig.lead && (
+              <p
+                className={cn(
+                  'text-base font-medium text-exvia-black/70 transition-all duration-800 ease-out-quart',
+                  sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                )}
+                style={{ transitionDelay: '140ms' }}
+              >
+                {aboutConfig.lead}
+              </p>
+            )}
+
+            {/* System description with FOUND / LOOK / GROW highlights */}
             {aboutConfig.description && (
               <div
                 className={cn(
                   'transition-all duration-800 ease-out-quart',
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
-                style={{ transitionDelay: '100ms' }}
+                style={{ transitionDelay: '200ms' }}
               >
                 <p className="text-xl lg:text-2xl text-exvia-black leading-relaxed">
-                  {aboutConfig.description}
+                  <Hl text={aboutConfig.description} />
                 </p>
               </div>
             )}
@@ -51,13 +82,13 @@ export function About() {
                   'flex items-end gap-3 pt-4 transition-all duration-800 ease-out-quart',
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
-                style={{ transitionDelay: '200ms' }}
+                style={{ transitionDelay: '280ms' }}
               >
                 <span className="text-7xl lg:text-8xl font-black text-exvia-black leading-none">
                   {aboutConfig.experienceValue}
                 </span>
                 {aboutConfig.experienceLabel && (
-                  <span className="text-sm text-exvia-black/60 pb-3">
+                  <span className="text-sm text-exvia-black/60 pb-3 whitespace-pre-line">
                     {aboutConfig.experienceLabel}
                   </span>
                 )}
@@ -71,7 +102,7 @@ export function About() {
                   'grid grid-cols-3 gap-8 pt-8 border-t border-exvia-border transition-all duration-800 ease-out-quart',
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
-                style={{ transitionDelay: '300ms' }}
+                style={{ transitionDelay: '360ms' }}
               >
                 {aboutConfig.stats.map((stat, index) => (
                   <div key={index}>

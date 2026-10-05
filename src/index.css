@@ -155,6 +155,25 @@
     font-weight: 400;
     letter-spacing: -0.01em;
   }
+
+  /* FOUND / LOOK / GROW keyword system — each service owns a color + typeface */
+  .kw-found {
+    color: #65A30D;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+  .kw-look {
+    color: #0284C7;
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.08em;
+  }
+  .kw-grow {
+    color: #EA580C;
+    font-family: 'GeistMono', 'Courier New', monospace;
+    font-weight: 700;
+  }
   
   /* Text clamp utilities */
   .line-clamp-2 {

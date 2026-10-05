@@ -38,6 +38,9 @@ export interface AboutImage {
 
 export interface AboutConfig {
   label: string;
+  valueProp: string;
+  valuePropAccent: string;
+  lead: string;
   description: string;
   experienceValue: string;
   experienceLabel: string;
@@ -55,6 +58,7 @@ export interface ServiceItem {
 export interface ServicesConfig {
   label: string;
   heading: string;
+  headingParts: string[];
   services: ServiceItem[];
 }
 
@@ -185,8 +189,11 @@ const zh: Content = {
   },
   about: {
     label: "About · 关于我们",
+    valueProp: "店再好，搜不到、刷不到，",
+    valuePropAccent: "就等于不存在。",
+    lead: "FOUNDLY 是一家扎根新加坡的 Local Growth Studio。",
     description:
-      "FOUNDLY 是一家扎根新加坡的 Local Growth Studio。我们相信：店再好，搜不到、刷不到，就等于不存在。我们把 FOUND（SEO·GEO 搜索可见）、LOOK（品牌网站门面）、GROW（社媒引流获客）做成一套增长系统——帮你在 Google 第一屏被搜到、在社媒被刷到、在 AI 搜索里被点名，最终把线上流量变成走进店里的客。",
+      "我们把 FOUND（SEO·GEO 搜索可见）、LOOK（品牌网站门面）、GROW（社媒引流获客）做成一套增长系统——帮你在 Google 第一屏被搜到、在社媒被刷到、在 AI 搜索里被点名，最终把线上流量变成走进店里的客。",
     experienceValue: "120+",
     experienceLabel: "家实体店\n被找到",
     stats: [
@@ -205,6 +212,7 @@ const zh: Content = {
   services: {
     label: "The FOUNDLY System · 服务体系",
     heading: "先被找到，再有门面，然后获得到客",
+    headingParts: ["先被找到", "，再有门面", "，然后获得到客"],
     services: [
       {
         iconName: "Search",
@@ -432,8 +440,11 @@ const en: Content = {
   },
   about: {
     label: "About",
+    valueProp: "A great store that can't be searched or scrolled to ",
+    valuePropAccent: "might as well not exist.",
+    lead: "FOUNDLY is a Local Growth Studio rooted in Singapore.",
     description:
-      "FOUNDLY is a Local Growth Studio rooted in Singapore. We believe a great store that can't be searched or scrolled to might as well not exist. So we built one growth system — FOUND (SEO·GEO visibility), LOOK (your website storefront), GROW (social traffic & customer acquisition) — to put you on page one of Google, into local feeds, and into AI answers, turning online traffic into customers walking through your door.",
+      "We built one growth system — FOUND (SEO·GEO visibility), LOOK (your website storefront), GROW (social traffic & customer acquisition) — to put you on page one of Google, into local feeds, and into AI answers, turning online traffic into customers walking through your door.",
     experienceValue: "120+",
     experienceLabel: "local stores\nget found",
     stats: [
@@ -452,6 +463,7 @@ const en: Content = {
   services: {
     label: "The FOUNDLY System",
     heading: "Get found. Look great. Get customers.",
+    headingParts: ["Get found.", " Look great.", " Get customers."],
     services: [
       {
         iconName: "Search",
