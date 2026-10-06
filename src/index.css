@@ -156,13 +156,13 @@
     letter-spacing: -0.01em;
   }
 
-  /* FOUND / LOOK / GROW keyword system — same bold font, one color each */
-  .kw-found {
+  /* DISCOVER / BUILD / GROW keyword system — same bold font, one color each */
+  .kw-discover {
     color: #65A30D;
     font-weight: 900;
     letter-spacing: -0.02em;
   }
-  .kw-look {
+  .kw-build {
     color: #0284C7;
     font-weight: 900;
     letter-spacing: -0.02em;

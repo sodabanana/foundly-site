@@ -37,7 +37,7 @@ export interface AboutImage {
 }
 
 export interface AboutPillar {
-  key: 'found' | 'look' | 'grow';
+  key: 'discover' | 'build' | 'grow';
   name: string;
   scope: string;
   desc: string;
@@ -176,7 +176,7 @@ const zh: Content = {
     language: "zh",
     title: "FOUNDLY · Get Found. Get Customers. | 新加坡实体店增长工作室",
     description:
-      "FOUNDLY 是新加坡本地增长工作室（Local Growth Studio）：FOUND（SEO·GEO 搜索可见）+ LOOK（品牌网站门面）+ GROW（社媒引流获客），帮实体店被找到、被看见、获得到客。",
+      "FOUNDLY 是新加坡本地增长工作室（Local Growth Studio）：DISCOVER（SEO·GEO 搜索可见）+ BUILD（品牌网站门面）+ GROW（社媒引流获客），帮实体店被找到、被看见、获得到客。",
   },
   navigation: {
     logo: "foundly",
@@ -199,18 +199,19 @@ const zh: Content = {
     label: "About · 关于我们",
     valueProp: "店再好，搜不到、刷不到，",
     valuePropAccent: "就等于不存在。",
-    lead: "FOUNDLY 是一家扎根新加坡的 Local Growth Studio。",
-    description: "三个服务，一套增长系统——按你店的阶段，可以只做一项，也可以三项一起跑。",
+    lead: "",
+    description:
+      "三个服务，一套增长系统。FOUNDLY 是致力于服务 SME 商家的 Growth Studio，已成功帮助咖啡厅、舞蹈室、理发店、纹身馆等实现线上品牌曝光。",
     pillars: [
       {
-        key: "look",
-        name: "LOOK",
-        scope: "品牌网站门面",
+        key: "build",
+        name: "BUILD",
+        scope: "构建品牌网站门面",
         desc: "服务项目、地址导航、真实门店图、顾客评价——搜到你的人，3 秒内决定走进来。",
       },
       {
-        key: "found",
-        name: "FOUND",
+        key: "discover",
+        name: "DISCOVER",
         scope: "SEO·GEO 搜索可见",
         desc: "在 Google 第一屏被搜到，在 ChatGPT 等 AI 搜索里被点名。",
       },
@@ -221,13 +222,12 @@ const zh: Content = {
         desc: "在 IG / TikTok / 小红书被本地人刷到，把曝光变成到店客流。",
       },
     ],
-    experienceValue: "120+",
-    experienceLabel: "家实体店\n被找到",
+    experienceValue: "",
+    experienceLabel: "",
     stats: [
-      { value: "120+", label: "家本地实体店" },
-      { value: "98%", label: "客户续约率" },
-      { value: "30天", label: "品牌网站上线" },
-      { value: "3.2x", label: "平均获客提升" },
+      { value: "120+", label: "家实体店在 Google Maps 被找到" },
+      { value: "7天", label: "品牌网站上线" },
+      { value: "3.2x", label: "线上曝光+获客提升" },
     ],
     images: [
       { src: "/images/about-1.jpg", alt: "FOUNDLY 顾问与店主一起看数据" },
@@ -238,19 +238,19 @@ const zh: Content = {
   },
   services: {
     label: "The FOUNDLY System · 服务体系",
-    heading: "先有门面，再被找到，然后获得到客",
-    headingParts: ["先有门面", "，再被找到", "，然后获得到客"],
+    heading: "先建门面，再被搜到，然后获得到客",
+    headingParts: ["先建门面", "，再被搜到", "，然后获得到客"],
     services: [
       {
         iconName: "Palette",
-        title: "LOOK · 有门面",
+        title: "BUILD · 构建门面",
         description:
           "Website + Brand Presence。为实体店打造品牌官网：服务项目、门店地址与导航、真实环境图、顾客评价、WhatsApp 一键预约——搜到你的人，3 秒内决定走进来。",
         image: "/images/service-2.jpg",
       },
       {
         iconName: "Search",
-        title: "FOUND · 被找到",
+        title: "DISCOVER · 搜索可见",
         description:
           "SEO + GEO + Local Search。Google 排名与地图优化，外加 ChatGPT / Perplexity / Gemini 等 AI 搜索可见度建设——客户搜你时，你在第一屏；AI 推荐时，你的店被点名。",
         image: "/images/service-1.jpg",
@@ -272,7 +272,7 @@ const zh: Content = {
     projects: [
       {
         title: "牛车水手冲咖啡馆",
-        category: "FOUND + LOOK · 官网预约增长 3 倍",
+        category: "DISCOVER + BUILD · 官网预约增长 3 倍",
         year: "2026",
         image: "/images/portfolio-1.jpg",
         featured: true,
@@ -285,13 +285,13 @@ const zh: Content = {
       },
       {
         title: "CBD 精品健身房",
-        category: "FOUND · “gym near me” 稳定前三",
+        category: "DISCOVER · “gym near me” 稳定前三",
         year: "2025",
         image: "/images/portfolio-3.jpg",
       },
       {
         title: "如切生活选物店",
-        category: "LOOK + GROW · 线上咨询 +150%",
+        category: "BUILD + GROW · 线上咨询 +150%",
         year: "2025",
         image: "/images/portfolio-4.jpg",
       },
@@ -317,27 +317,27 @@ const zh: Content = {
       {
         quote:
           "以前只靠熟客口口相传，现在 Google 搜 ‘cafe near Chinatown’ 第一个就是我们。周末开始排长队，官网预约多了三倍。",
-        author: "陈志明",
-        role: "创始人",
-        company: "牛车水手冲咖啡馆",
+        author: "一位咖啡馆主",
+        role: "牛车水 · 手冲咖啡馆",
+        company: "",
         image: "/images/testimonial-1.jpg",
         rating: 5,
       },
       {
         quote:
           "FOUNDLY 不只是帮我们发帖，他们管的是‘这个月多少个新客到店’。半年下来，会员从 500 涨到 2,000，报表每个月都清清楚楚。",
-        author: "Siti Rahman",
-        role: "主理人",
-        company: "如切宠物美容店",
+        author: "一位宠物美容店主理人",
+        role: "如切 · 宠物美容店",
+        company: "",
         image: "/images/testimonial-2.jpg",
         rating: 5,
       },
       {
         quote:
           "现在 AI 搜索里终于能搜到我们了。有顾客说是 ChatGPT 推荐来的——这在两年前完全不敢想。GEO 这块他们确实是新加坡第一批做的。",
-        author: "Arvind Kumar",
-        role: "合伙人",
-        company: "CBD 精品健身房",
+        author: "一位健身房合伙人",
+        role: "CBD · 精品健身房",
+        company: "",
         image: "/images/testimonial-3.jpg",
         rating: 5,
       },
@@ -349,11 +349,11 @@ const zh: Content = {
     items: [
       {
         q: "做一次品牌网站要多少钱、多久？",
-        a: "LOOK 套餐 S$2,800 起，包含设计、搭建、文案与基础门店拍摄，最快 30 天上线；预算紧张可以先从单页官网做起，之后随时扩展。",
+        a: "BUILD 套餐 S$2,800 起，包含设计、搭建、文案与基础门店拍摄，最快 30 天上线；预算紧张可以先从单页官网做起，之后随时扩展。",
       },
       {
         q: "我完全不懂线上，没有 logo 和图片怎么办？",
-        a: "完全正常，大多数客户一开始都这样。LOOK 包含基础品牌视觉与真实门店拍摄，你只管开门做生意，门面交给我们。",
+        a: "完全正常，大多数客户一开始都这样。BUILD 包含基础品牌视觉与真实门店拍摄，你只管开门做生意，门面交给我们。",
       },
       {
         q: "社媒代运营具体包含什么？",
@@ -377,12 +377,12 @@ const zh: Content = {
       },
       {
         q: "只有一家小店、预算有限，适合找你们吗？",
-        a: "适合。FOUND 单项 S$600/月起，先解决「被找到」这个最痛的问题；跑通之后再升级 LOOK 和 GROW，一步一步来。",
+        a: "适合。DISCOVER 单项 S$600/月起，先解决「被找到」这个最痛的问题；跑通之后再升级 BUILD 和 GROW，一步一步来。",
       },
     ],
   },
   cta: {
-    tags: ["FOUND · 被找到", "LOOK · 有门面", "GROW · 获得到客"],
+    tags: ["DISCOVER · 搜索可见", "BUILD · 构建门面", "GROW · 获得到客"],
     heading: "你的店很好，只是还没被找到。",
     description:
       "预约一次免费 30 分钟「Get Found」诊断：我们会当面告诉你，客户在 Google 和 AI 搜索里为什么找不到你，以及第一步该怎么改。",
@@ -394,13 +394,13 @@ const zh: Content = {
   footer: {
     logo: "foundly",
     description:
-      "Foundly — Local Growth Studio. Helping local businesses get FOUND. 让新加坡实体店被找到、被看见、获得到客。",
+      "Foundly — Local Growth Studio. Helping local businesses get found. 让新加坡实体店被找到、被看见、获得到客。",
     columns: [
       {
         title: "服务体系",
         links: [
-          { label: "FOUND · SEO·GEO", href: "#services" },
-          { label: "LOOK · 品牌网站", href: "#services" },
+          { label: "DISCOVER · SEO·GEO", href: "#services" },
+          { label: "BUILD · 品牌网站", href: "#services" },
           { label: "GROW · 社媒获客", href: "#services" },
         ],
       },
@@ -425,7 +425,6 @@ const zh: Content = {
     socialLinks: [
       { iconName: "Instagram", href: "https://instagram.com/foundly.sg", label: "Instagram" },
       { iconName: "Facebook", href: "https://facebook.com/foundly.sg", label: "Facebook" },
-      { iconName: "Linkedin", href: "https://linkedin.com/company/foundly-sg", label: "LinkedIn" },
     ],
     newsletterHeading: "订阅《Get Found 周报》",
     newsletterDescription:
@@ -446,7 +445,7 @@ const en: Content = {
     language: "en",
     title: "FOUNDLY · Get Found. Get Customers. | Local Growth Studio, Singapore",
     description:
-      "FOUNDLY is a Singapore Local Growth Studio: FOUND (SEO·GEO visibility) + LOOK (websites that sell) + GROW (social media & customer acquisition) — helping physical stores get found and get customers.",
+      "FOUNDLY is a Singapore Local Growth Studio: DISCOVER (SEO·GEO visibility) + BUILD (websites that sell) + GROW (social media & customer acquisition) — helping physical stores get found and get customers.",
   },
   navigation: {
     logo: "foundly",
@@ -469,18 +468,19 @@ const en: Content = {
     label: "About",
     valueProp: "A great store that can't be searched or scrolled to ",
     valuePropAccent: "might as well not exist.",
-    lead: "FOUNDLY is a Local Growth Studio rooted in Singapore.",
-    description: "Three services, one growth system — start with one, or run all three together.",
+    lead: "",
+    description:
+      "Three services, one growth system. FOUNDLY is a Growth Studio dedicated to SME businesses — having helped cafés, dance studios, barbershops and tattoo parlours build their online presence.",
     pillars: [
       {
-        key: "look",
-        name: "LOOK",
+        key: "build",
+        name: "BUILD",
         scope: "Website & Brand Presence",
         desc: "Services, directions, real photos, reviews — visitors decide to walk in within 3 seconds.",
       },
       {
-        key: "found",
-        name: "FOUND",
+        key: "discover",
+        name: "DISCOVER",
         scope: "SEO·GEO Visibility",
         desc: "On page one of Google, named in AI answers like ChatGPT.",
       },
@@ -491,13 +491,12 @@ const en: Content = {
         desc: "Seen by locals on IG / TikTok / Xiaohongshu — exposure turned into foot traffic.",
       },
     ],
-    experienceValue: "120+",
-    experienceLabel: "local stores\nget found",
+    experienceValue: "",
+    experienceLabel: "",
     stats: [
-      { value: "120+", label: "Local stores served" },
-      { value: "98%", label: "Client retention" },
-      { value: "30 days", label: "Website launch" },
-      { value: "3.2x", label: "Avg. acquisition lift" },
+      { value: "120+", label: "local stores found on Google Maps" },
+      { value: "7 days", label: "brand website launch" },
+      { value: "3.2x", label: "online visibility & customer lift" },
     ],
     images: [
       { src: "/images/about-1.jpg", alt: "Foundly consultants reviewing numbers with a store owner" },
@@ -508,19 +507,19 @@ const en: Content = {
   },
   services: {
     label: "The FOUNDLY System",
-    heading: "Look great. Get found. Get customers.",
-    headingParts: ["Look great.", " Get found.", " Get customers."],
+    heading: "Build the storefront. Get discovered. Get customers.",
+    headingParts: ["Build the storefront.", " Get discovered.", " Get customers."],
     services: [
       {
         iconName: "Palette",
-        title: "LOOK · Look Great",
+        title: "BUILD · Build Your Storefront",
         description:
           "Website + Brand Presence. A brand website for your store: services, address & directions, real photos, customer reviews, one-tap WhatsApp booking — visitors decide to walk in within 3 seconds.",
         image: "/images/service-2.jpg",
       },
       {
         iconName: "Search",
-        title: "FOUND · Get Found",
+        title: "DISCOVER · Get Discovered",
         description:
           "SEO + GEO + Local Search. Google rankings and Maps optimization, plus visibility across AI search — ChatGPT, Perplexity, Gemini. When customers search, you're on page one; when AI recommends, your store gets named.",
         image: "/images/service-1.jpg",
@@ -542,7 +541,7 @@ const en: Content = {
     projects: [
       {
         title: "Chinatown Specialty Coffee",
-        category: "FOUND + LOOK · 3x website bookings",
+        category: "DISCOVER + BUILD · 3x website bookings",
         year: "2026",
         image: "/images/portfolio-1.jpg",
         featured: true,
@@ -555,13 +554,13 @@ const en: Content = {
       },
       {
         title: "CBD Boutique Gym",
-        category: "FOUND · top 3 for “gym near me”",
+        category: "DISCOVER · top 3 for “gym near me”",
         year: "2025",
         image: "/images/portfolio-3.jpg",
       },
       {
         title: "Joo Chiat Lifestyle Store",
-        category: "LOOK + GROW · +150% online enquiries",
+        category: "BUILD + GROW · +150% online enquiries",
         year: "2025",
         image: "/images/portfolio-4.jpg",
       },
@@ -587,27 +586,27 @@ const en: Content = {
       {
         quote:
           "We used to rely on regulars' word of mouth. Now when people search ‘cafe near Chinatown’, we're first. Weekends have queues, and website bookings have tripled.",
-        author: "Tan Zhi Ming",
-        role: "Founder",
-        company: "Chinatown Specialty Coffee",
+        author: "A café owner",
+        role: "Chinatown · specialty coffee",
+        company: "",
         image: "/images/testimonial-1.jpg",
         rating: 5,
       },
       {
         quote:
           "FOUNDLY doesn't just post for us — they own ‘how many new customers walked in this month’. In six months our members grew from 500 to 2,000, and the monthly report shows everything.",
-        author: "Siti Rahman",
-        role: "Owner",
-        company: "Katong Pet Grooming",
+        author: "A pet grooming owner",
+        role: "Joo Chiat · pet grooming studio",
+        company: "",
         image: "/images/testimonial-2.jpg",
         rating: 5,
       },
       {
         quote:
           "AI search finally finds us. A customer said ChatGPT recommended us — unimaginable two years ago. FOUNDLY was among the first in Singapore doing GEO.",
-        author: "Arvind Kumar",
-        role: "Partner",
-        company: "CBD Boutique Gym",
+        author: "A gym partner",
+        role: "CBD · boutique gym",
+        company: "",
         image: "/images/testimonial-3.jpg",
         rating: 5,
       },
@@ -619,11 +618,11 @@ const en: Content = {
     items: [
       {
         q: "How much does a brand website cost, and how long does it take?",
-        a: "LOOK packages start from S$2,800, covering design, build, copywriting and a basic store shoot — live in as fast as 30 days. On a tighter budget? Start with a one-page site and expand anytime.",
+        a: "BUILD packages start from S$2,800, covering design, build, copywriting and a basic store shoot — live in as fast as 30 days. On a tighter budget? Start with a one-page site and expand anytime.",
       },
       {
         q: "I'm not online-savvy at all — no logo, no photos. What then?",
-        a: "That's completely normal — most of our clients start exactly there. LOOK includes core brand visuals and a real shoot of your store. You keep running the shop; we build the storefront.",
+        a: "That's completely normal — most of our clients start exactly there. BUILD includes core brand visuals and a real shoot of your store. You keep running the shop; we build the storefront.",
       },
       {
         q: "What exactly does social media management include?",
@@ -647,12 +646,12 @@ const en: Content = {
       },
       {
         q: "I'm a single small shop on a budget — is this for me?",
-        a: "Yes. FOUND starts from S$600/month — fix ‘being found’ first, then upgrade to LOOK and GROW as it pays off, step by step.",
+        a: "Yes. DISCOVER starts from S$600/month — fix ‘being found’ first, then upgrade to BUILD and GROW as it pays off, step by step.",
       },
     ],
   },
   cta: {
-    tags: ["FOUND · Get found", "LOOK · Look great", "GROW · Get customers"],
+    tags: ["DISCOVER · Get discovered", "BUILD · Build great", "GROW · Get customers"],
     heading: "Your store is great. It just hasn't been found yet.",
     description:
       "Book a free 30-minute Get Found audit: we'll show you exactly why customers can't find you on Google and AI search — and the first step to fix it.",
@@ -664,13 +663,13 @@ const en: Content = {
   footer: {
     logo: "foundly",
     description:
-      "Foundly — Local Growth Studio. Helping local businesses get FOUND. Making sure Singapore's physical stores get found, get seen, and get customers.",
+      "Foundly — Local Growth Studio. Helping local businesses get found. Making sure Singapore's physical stores get found, get seen, and get customers.",
     columns: [
       {
         title: "Services",
         links: [
-          { label: "FOUND · SEO & GEO", href: "#services" },
-          { label: "LOOK · Websites", href: "#services" },
+          { label: "DISCOVER · SEO & GEO", href: "#services" },
+          { label: "BUILD · Websites", href: "#services" },
           { label: "GROW · Social & Acquisition", href: "#services" },
         ],
       },
@@ -695,7 +694,6 @@ const en: Content = {
     socialLinks: [
       { iconName: "Instagram", href: "https://instagram.com/foundly.sg", label: "Instagram" },
       { iconName: "Facebook", href: "https://facebook.com/foundly.sg", label: "Facebook" },
-      { iconName: "Linkedin", href: "https://linkedin.com/company/foundly-sg", label: "LinkedIn" },
     ],
     newsletterHeading: "Subscribe to the Get Found Weekly",
     newsletterDescription:

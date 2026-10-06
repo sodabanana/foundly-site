@@ -1,20 +1,20 @@
 import { cn } from '@/lib/utils';
 
 /**
- * Renders text with the FOUND / LOOK / GROW keywords wrapped in their
+ * Renders text with the DISCOVER / BUILD / GROW keywords wrapped in their
  * branded keyword styles (color + typeface) from index.css:
- *   FOUND — lime, Geist black 900
- *   LOOK  — sky blue, Instrument Serif italic
- *   GROW  — orange, GeistMono bold
+ *   DISCOVER — lime #65A30D, Geist black 900
+ *   BUILD    — sky blue #0284C7, Geist black 900
+ *   GROW     — orange #EA580C, Geist black 900
  */
 const KEYWORDS: Record<string, string> = {
-  FOUND: 'kw-found',
-  LOOK: 'kw-look',
+  DISCOVER: 'kw-discover',
+  BUILD: 'kw-build',
   GROW: 'kw-grow',
 };
 
 export function Hl({ text, className }: { text: string; className?: string }) {
-  const parts = text.split(/(FOUND|LOOK|GROW)/g);
+  const parts = text.split(/(DISCOVER|BUILD|GROW)/g);
   return (
     <span className={className}>
       {parts.map((part, i) =>
@@ -31,6 +31,6 @@ export function Hl({ text, className }: { text: string; className?: string }) {
 }
 
 /** Keyword class for a given service key, for partial highlighting. */
-export function kwClass(key: 'found' | 'look' | 'grow'): string {
+export function kwClass(key: 'discover' | 'build' | 'grow'): string {
   return cn(`kw-${key}`);
 }

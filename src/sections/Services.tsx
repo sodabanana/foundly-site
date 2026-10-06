@@ -16,7 +16,7 @@ interface ServiceCardProps {
   index: number;
 }
 
-const SERVICE_KEYS = ['look', 'found', 'grow'] as const;
+const SERVICE_KEYS = ['build', 'discover', 'grow'] as const;
 
 function ServiceCard({ service, index }: ServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false);

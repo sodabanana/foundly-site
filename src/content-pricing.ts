@@ -47,8 +47,8 @@ export interface PricingLabels {
 
 export interface PricingConfig {
   labels: PricingLabels;
-  found: PricingGroup;
-  look: PricingGroup;
+  discover: PricingGroup;
+  build: PricingGroup;
   grow: GrowGroup;
 }
 
@@ -77,9 +77,9 @@ const zh: PricingConfig = {
       "已为你打开邮件应用发送留言；如果没有自动打开，请直接发邮件至 hello@foundly.sg 或 WhatsApp +65 9000 0000。",
     closeLabel: "关闭",
   },
-  found: {
-    key: "found",
-    name: "FOUND · 被找到",
+  discover: {
+    key: "discover",
+    name: "DISCOVER · 搜索可见",
     subtitle: "SEO + GEO · 月费制",
     plans: [
       {
@@ -128,9 +128,9 @@ const zh: PricingConfig = {
     footnote:
       "所有档位含免费 48 小时「被找到」快照：先看看 Google 和 AI 现在怎么回答你的品类，再决定档位。",
   },
-  look: {
-    key: "look",
-    name: "LOOK · 有门面",
+  build: {
+    key: "build",
+    name: "BUILD · 构建门面",
     subtitle: "品牌网站 · 一次性交付",
     plans: [
       {
@@ -217,9 +217,9 @@ const en: PricingConfig = {
       "Your email app should have opened with the message ready to send. If not, email hello@foundly.sg or WhatsApp +65 9000 0000.",
     closeLabel: "Close",
   },
-  found: {
-    key: "found",
-    name: "FOUND · Get Found",
+  discover: {
+    key: "discover",
+    name: "DISCOVER · Get Discovered",
     subtitle: "SEO + GEO · Monthly retainer",
     plans: [
       {
@@ -268,9 +268,9 @@ const en: PricingConfig = {
     footnote:
       "Every tier includes a free 48-hour Get Found snapshot: see how Google and AI currently answer your category before picking a tier.",
   },
-  look: {
-    key: "look",
-    name: "LOOK · Look Great",
+  build: {
+    key: "build",
+    name: "BUILD · Build Your Storefront",
     subtitle: "Brand websites · One-time",
     plans: [
       {

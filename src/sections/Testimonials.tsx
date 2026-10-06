@@ -160,7 +160,7 @@ export function Testimonials() {
                         {testimonial.author}
                       </p>
                       <p className="text-sm text-exvia-black/50 mt-1">
-                        {testimonial.role}, {testimonial.company}
+                        {[testimonial.role, testimonial.company].filter(Boolean).join(', ')}
                       </p>
                     </div>
                   ))}

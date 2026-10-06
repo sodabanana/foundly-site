@@ -3,8 +3,8 @@ import { useScrollAnimation, useStaggerAnimation } from '@/hooks/useScrollAnimat
 import { aboutConfig } from '@/i18n';
 
 const PILLAR_COLORS: Record<string, string> = {
-  look: '#0284C7',
-  found: '#65A30D',
+  build: '#0284C7',
+  discover: '#65A30D',
   grow: '#EA580C',
 };
 
@@ -34,7 +34,7 @@ export function About() {
               </div>
             )}
 
-            {/* Value Proposition — bold statement, compact size */}
+            {/* Value Proposition */}
             {(aboutConfig.valueProp || aboutConfig.valuePropAccent) && (
               <h2
                 className={cn(
@@ -52,33 +52,29 @@ export function About() {
               </h2>
             )}
 
-            {/* Lead line */}
-            {aboutConfig.lead && (
-              <p
+            {/* Stats — right under the value proposition */}
+            {aboutConfig.stats.length > 0 && (
+              <div
                 className={cn(
-                  'mt-4 text-base font-medium text-exvia-black/70 transition-all duration-800 ease-out-quart',
+                  'grid grid-cols-3 gap-6 mt-8 pt-8 border-t border-exvia-border transition-all duration-800 ease-out-quart',
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
                 style={{ transitionDelay: '140ms' }}
               >
-                {aboutConfig.lead}
-              </p>
+                {aboutConfig.stats.map((stat, index) => (
+                  <div key={index}>
+                    <span className="block text-3xl lg:text-4xl font-black text-exvia-black tracking-[-0.02em]">
+                      {stat.value}
+                    </span>
+                    <span className="block mt-1.5 text-xs lg:text-sm text-exvia-black/60 leading-snug">
+                      {stat.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
             )}
 
-            {/* System description */}
-            {aboutConfig.description && (
-              <p
-                className={cn(
-                  'mt-3 text-base text-exvia-black/60 leading-relaxed transition-all duration-800 ease-out-quart',
-                  sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-                )}
-                style={{ transitionDelay: '180ms' }}
-              >
-                {aboutConfig.description}
-              </p>
-            )}
-
-            {/* Three pillars — LOOK / FOUND / GROW, aligned columns */}
+            {/* Three pillars — BUILD / DISCOVER / GROW, aligned columns */}
             {aboutConfig.pillars?.length > 0 && (
               <div className="mt-10 grid sm:grid-cols-3 gap-6">
                 {aboutConfig.pillars.map((pillar, index) => (
@@ -90,7 +86,7 @@ export function About() {
                     )}
                     style={{
                       borderTopColor: PILLAR_COLORS[pillar.key],
-                      transitionDelay: `${240 + index * 90}ms`,
+                      transitionDelay: `${220 + index * 90}ms`,
                     }}
                   >
                     <span className={cn('block text-2xl font-black tracking-[-0.02em]', `kw-${pillar.key}`)}>
@@ -105,46 +101,21 @@ export function About() {
               </div>
             )}
 
-            {/* Experience Badge */}
-            {aboutConfig.experienceValue && (
-              <div
+            {/* System description */}
+            {aboutConfig.description && (
+              <p
                 className={cn(
-                  'flex items-end gap-3 mt-12 transition-all duration-800 ease-out-quart',
+                  'mt-10 text-base text-exvia-black/70 leading-relaxed transition-all duration-800 ease-out-quart',
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
-                style={{ transitionDelay: '300ms' }}
+                style={{ transitionDelay: '340ms' }}
               >
-                <span className="text-6xl lg:text-7xl font-black text-exvia-black leading-none">
-                  {aboutConfig.experienceValue}
-                </span>
-                {aboutConfig.experienceLabel && (
-                  <span className="text-sm text-exvia-black/60 pb-2 whitespace-pre-line">
-                    {aboutConfig.experienceLabel}
-                  </span>
-                )}
-              </div>
-            )}
-
-            {/* Stats */}
-            {aboutConfig.stats.length > 0 && (
-              <div
-                className={cn(
-                  'grid grid-cols-3 gap-8 mt-8 pt-8 border-t border-exvia-border transition-all duration-800 ease-out-quart',
-                  sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-                )}
-                style={{ transitionDelay: '360ms' }}
-              >
-                {aboutConfig.stats.map((stat, index) => (
-                  <div key={index}>
-                    <span className="block text-3xl font-semibold text-exvia-black">{stat.value}</span>
-                    <span className="text-sm text-exvia-black/60">{stat.label}</span>
-                  </div>
-                ))}
-              </div>
+                {aboutConfig.description}
+              </p>
             )}
           </div>
 
-          {/* Right Column - Image Grid */}
+          {/* Right Column - Image Grid (decorative, non-clickable) */}
           {aboutConfig.images.length > 0 && (
             <div ref={imagesRef} className="grid grid-cols-2 gap-4">
               {aboutConfig.images.map((image, index) => (
@@ -156,13 +127,13 @@ export function About() {
                     visibleItems[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                   )}
                 >
-                  <div className="aspect-[4/5] relative group cursor-pointer">
+                  <div className="aspect-[4/5] relative">
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover transition-transform duration-500 ease-out-quad group-hover:scale-105"
+                      className="w-full h-full object-cover"
+                      draggable={false}
                     />
-                    <div className="absolute inset-0 bg-exvia-black/0 group-hover:bg-exvia-black/10 transition-colors duration-300" />
                   </div>
                 </div>
               ))}

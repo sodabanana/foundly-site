@@ -69,7 +69,7 @@ export function Pricing() {
   const pricing = getPricing();
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.2 });
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation({ threshold: 0.1 });
-  const [tab, setTab] = useState<'found' | 'look' | 'grow'>('found');
+  const [tab, setTab] = useState<'discover' | 'build' | 'grow'>('discover');
 
   // Request-offer dialog state
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -97,8 +97,8 @@ export function Pricing() {
   };
 
   const tabs = [
-    { key: 'found' as const, label: 'FOUND' },
-    { key: 'look' as const, label: 'LOOK' },
+    { key: 'discover' as const, label: 'DISCOVER' },
+    { key: 'build' as const, label: 'BUILD' },
     { key: 'grow' as const, label: 'GROW' },
   ];
 
@@ -164,7 +164,7 @@ export function Pricing() {
         )}
 
         <div ref={gridRef}>
-          {/* FOUND / LOOK plan grids */}
+          {/* DISCOVER / BUILD plan grids */}
           {group && (
             <div className="grid md:grid-cols-3 gap-6">
               {group.plans.map((plan, i) => (
