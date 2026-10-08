@@ -443,9 +443,9 @@ const zh: Content = {
 const en: Content = {
   site: {
     language: "en",
-    title: "FOUNDLY · Get Found. Get Customers. | Local Growth Studio, Singapore",
+    title: "Foundly · Get Found. Get Customers. | Growth Studio for Singapore's Local Businesses",
     description:
-      "FOUNDLY is a Singapore Local Growth Studio: DISCOVER (SEO·GEO visibility) + BUILD (websites that sell) + GROW (social media & customer acquisition) — helping physical stores get found and get customers.",
+      "Foundly is a Singapore growth studio helping local businesses get discovered and turn online visibility into real customers — with high-converting websites, local SEO & AI-search visibility, and social media that brings people through the door.",
   },
   navigation: {
     logo: "foundly",
@@ -453,10 +453,10 @@ const en: Content = {
       { label: "About", href: "#about" },
       { label: "Services", href: "#services" },
       { label: "Pricing", href: "#pricing" },
-      { label: "Use Cases", href: "#portfolio" },
+      { label: "Success Stories", href: "#portfolio" },
       { label: "FAQ", href: "#faq" },
     ],
-    contactLabel: "Book a Free Audit",
+    contactLabel: "Get a Free Visibility Audit",
     contactHref: "#contact",
   },
   hero: {
@@ -466,37 +466,37 @@ const en: Content = {
   },
   about: {
     label: "About",
-    valueProp: "A great store that can't be searched or scrolled to ",
-    valuePropAccent: "might as well not exist.",
+    valueProp: "Great local businesses ",
+    valuePropAccent: "deserve to be found.",
     lead: "",
     description:
-      "Three services, one growth system. FOUNDLY is a Growth Studio dedicated to SME businesses — having helped cafés, dance studios, barbershops and tattoo parlours build their online presence.",
+      "If customers can't find you on Google, Maps, AI search or social media, they'll choose someone else. Foundly builds the digital presence local businesses need to get discovered, earn trust, and turn online attention into bookings, enquiries and foot traffic.",
     pillars: [
       {
         key: "build",
         name: "BUILD",
         scope: "Website & Brand Presence",
-        desc: "Services, directions, real photos, reviews — visitors decide to walk in within 3 seconds.",
+        desc: "A digital storefront that builds trust — your services, directions, real photography, reviews and one-tap WhatsApp bookings in one place.",
       },
       {
         key: "discover",
         name: "DISCOVER",
-        scope: "SEO·GEO Visibility",
-        desc: "On page one of Google, named in AI answers like ChatGPT.",
+        scope: "SEO, Google Maps & AI Search",
+        desc: "Show up when customers search on Google and Maps — and increase your chances of being mentioned by AI platforms like ChatGPT, Gemini and Perplexity.",
       },
       {
         key: "grow",
         name: "GROW",
-        scope: "Social & Customer Acquisition",
-        desc: "Seen by locals on IG / TikTok / Xiaohongshu — exposure turned into foot traffic.",
+        scope: "Social Media & Customer Acquisition",
+        desc: "Reach more people in your area through Instagram, Facebook, TikTok and Rednote — and turn attention into enquiries, bookings and visits.",
       },
     ],
     experienceValue: "",
     experienceLabel: "",
     stats: [
-      { value: "120+", label: "local stores found on Google Maps" },
-      { value: "7 days", label: "brand website launch" },
-      { value: "3.2x", label: "online visibility & customer lift" },
+      { value: "120+", label: "local businesses improved their Google Maps presence" },
+      { value: "7 days", label: "to launch a conversion-ready website" },
+      { value: "3.2×", label: "average uplift in online visibility and customer enquiries" },
     ],
     images: [
       { src: "/images/about-1.jpg", alt: "Foundly consultants reviewing numbers with a store owner" },
@@ -506,106 +506,106 @@ const en: Content = {
     ],
   },
   services: {
-    label: "The FOUNDLY System",
-    heading: "Build the storefront. Get discovered. Get customers.",
-    headingParts: ["Build the storefront.", " Get discovered.", " Get customers."],
+    label: "The Foundly System",
+    heading: "Build your presence. Get found. Grow your customer base.",
+    headingParts: ["Build your presence.", " Get found.", " Grow your customer base."],
     services: [
       {
         iconName: "Palette",
-        title: "BUILD · Build Your Storefront",
+        title: "BUILD · Build Your Presence",
         description:
-          "Website + Brand Presence. A brand website for your store: services, address & directions, real photos, customer reviews, one-tap WhatsApp booking — visitors decide to walk in within 3 seconds.",
+          "We create a polished, mobile-first website that brings together everything customers need to choose you: your services, location, directions, photography, reviews and booking options.",
         image: "/images/service-2.jpg",
       },
       {
         iconName: "Search",
-        title: "DISCOVER · Get Discovered",
+        title: "DISCOVER · Get Found",
         description:
-          "SEO + GEO + Local Search. Google rankings and Maps optimization, plus visibility across AI search — ChatGPT, Perplexity, Gemini. When customers search, you're on page one; when AI recommends, your store gets named.",
+          "We improve your visibility across Google Search, Google Maps and AI-powered discovery platforms — so when potential customers look for a business like yours, you have a better chance of being seen and chosen.",
         image: "/images/service-1.jpg",
       },
       {
         iconName: "TrendingUp",
         title: "GROW · Get Customers",
         description:
-          "Social Media + Customer Acquisition. Content planning and management for IG / FB / TikTok / Xiaohongshu, local ads and conversion tracking — content locals actually love, turning exposure into foot traffic.",
+          "We plan and manage social content your audience actually wants to watch, supported by targeted local campaigns and clear conversion tracking — so attention turns into real customers.",
         image: "/images/service-3.jpg",
       },
     ],
   },
   portfolio: {
-    label: "Use Cases",
-    heading: "They got found. Then they got customers.",
+    label: "Success Stories",
+    heading: "They got found — and grew from there.",
     description:
-      "Five typical Singapore stores — from getting found to getting customers. Every number is trackable; come verify them with us.",
+      "See how Singapore businesses have turned stronger online visibility into measurable enquiries, bookings and foot traffic.",
     projects: [
       {
         title: "Chinatown Specialty Coffee",
-        category: "DISCOVER + BUILD · 3x website bookings",
+        category: "BUILD + DISCOVER · 3× more website bookings",
         year: "2026",
         image: "/images/portfolio-1.jpg",
         featured: true,
       },
       {
         title: "Orchard Skincare Clinic",
-        category: "GROW · 400+ new walk-in enquiries monthly",
+        category: "GROW · 400+ new customer enquiries per month",
         year: "2026",
         image: "/images/portfolio-2.jpg",
       },
       {
         title: "CBD Boutique Gym",
-        category: "DISCOVER · top 3 for “gym near me”",
+        category: "DISCOVER · reached the top three for high-intent local searches",
         year: "2025",
         image: "/images/portfolio-3.jpg",
       },
       {
         title: "Joo Chiat Lifestyle Store",
-        category: "BUILD + GROW · +150% online enquiries",
+        category: "BUILD + GROW · 150% increase in online enquiries",
         year: "2025",
         image: "/images/portfolio-4.jpg",
       },
       {
         title: "Katong Pet Grooming",
-        category: "Full FOUNDLY system · +2,000 members in 6 months",
+        category: "The Full Foundly System · grew from 500 to 2,000 members in six months",
         year: "2025",
         image: "/images/portfolio-5.jpg",
       },
     ],
     cta: {
       label: "Next to get found",
-      heading: "Your store could be next",
-      linkText: "Get a free growth plan",
+      heading: "Your business could be next.",
+      linkText: "Get Your Free Growth Plan",
       linkHref: "#contact",
     },
     viewAllLabel: "",
   },
   testimonials: {
     label: "Testimonials",
-    heading: "What store owners say",
+    heading: "What local business owners say",
     testimonials: [
       {
         quote:
-          "We used to rely on regulars' word of mouth. Now when people search ‘cafe near Chinatown’, we're first. Weekends have queues, and website bookings have tripled.",
+          "We used to rely almost entirely on word of mouth. Now, customers regularly find us while searching for cafés around Chinatown — and our website bookings have tripled.",
         author: "A café owner",
-        role: "Chinatown · specialty coffee",
+        role: "Chinatown · Specialty coffee",
         company: "",
         image: "/images/testimonial-1.jpg",
         rating: 5,
       },
       {
         quote:
-          "FOUNDLY doesn't just post for us — they own ‘how many new customers walked in this month’. In six months our members grew from 500 to 2,000, and the monthly report shows everything.",
-        author: "A pet grooming owner",
-        role: "Joo Chiat · pet grooming studio",
+          "Foundly doesn't just post content for us. They focus on the number that matters: how many new customers we bring in. Our membership grew from 500 to 2,000 in six months, and the monthly reports make the results easy to understand.",
+        author: "A pet grooming studio owner",
+        role: "Joo Chiat · Pet care",
         company: "",
         image: "/images/testimonial-2.jpg",
         rating: 5,
       },
       {
         quote:
-          "AI search finally finds us. A customer said ChatGPT recommended us — unimaginable two years ago. FOUNDLY was among the first in Singapore doing GEO.",
-        author: "A gym partner",
-        role: "CBD · boutique gym",
+          "A customer recently told us they found us through ChatGPT. That would have sounded impossible a couple of years ago. Foundly helped us understand AI search early and build a presence around it.",
+        author: "A boutique gym partner",
+        role: "Singapore CBD",
         company: "",
         image: "/images/testimonial-3.jpg",
         rating: 5,
@@ -614,63 +614,63 @@ const en: Content = {
   },
   faq: {
     label: "FAQ",
-    heading: "8 questions every store owner asks",
+    heading: "Eight questions local business owners often ask",
     items: [
       {
-        q: "How much does a brand website cost, and how long does it take?",
+        q: "How much does a business website cost, and how long does it take to launch?",
         a: "BUILD packages start from S$2,800, covering design, build, copywriting and a basic store shoot — live in as fast as 30 days. On a tighter budget? Start with a one-page site and expand anytime.",
       },
       {
-        q: "I'm not online-savvy at all — no logo, no photos. What then?",
-        a: "That's completely normal — most of our clients start exactly there. BUILD includes core brand visuals and a real shoot of your store. You keep running the shop; we build the storefront.",
+        q: "What if I don't have a logo, professional photos or any marketing experience?",
+        a: "That's completely normal — most of our clients start exactly there. BUILD includes core brand visuals and a real shoot of your store. You keep running the business; we build the digital storefront.",
       },
       {
-        q: "What exactly does social media management include?",
-        a: "GROW covers content planning, shooting, publishing, community replies and local ad spend — plus a monthly acquisition report: reach, engagement, enquiries and walk-ins, all trackable.",
+        q: "What's included in your social media management service?",
+        a: "GROW covers content planning, shooting, publishing, community replies and local paid campaigns — plus a monthly report: reach, engagement, enquiries and visits, all trackable.",
       },
       {
-        q: "What is GEO? How is it different from SEO?",
-        a: "SEO gets you to the top of Google; GEO (Generative Engine Optimization) gets your store named in AI answers — ChatGPT, Perplexity, Gemini. More and more customers simply ask AI ‘what's good near me’ — GEO claims that brand-new acquisition channel.",
+        q: "What is GEO, and how is it different from SEO?",
+        a: "SEO improves how you appear in Google; GEO (Generative Engine Optimization) increases the chances of your business being mentioned in AI answers from ChatGPT, Gemini and Perplexity. More customers now ask AI 'what's good near me' — GEO helps them find you there.",
       },
       {
-        q: "How long until we see results?",
-        a: "Social usually gains traction in 4–8 weeks; SEO typically reaches page one in 3–6 months. We don't sell magic — we show visible progress every month.",
+        q: "How long does it usually take to see results?",
+        a: "Social usually gains traction in 4–8 weeks; SEO typically takes 3–6 months to build steady visibility. We don't promise magic — we show clear progress every month.",
       },
       {
-        q: "Do I need a long-term contract?",
-        a: "No. Everything is month-to-month, cancellable anytime. 98% of clients renew — because the reports speak for themselves.",
+        q: "Do I need to sign a long-term contract?",
+        a: "No. Everything is month-to-month, and you can cancel anytime. Most clients stay because the monthly reports speak for themselves.",
       },
       {
-        q: "Which industries do you serve?",
-        a: "F&B, beauty, fitness, education, pet services, retail — local businesses that close sales in-store, ideally with an average ticket above S$30.",
+        q: "What types of businesses do you work with?",
+        a: "Cafés, clinics, salons, gyms, studios, pet services and independent retailers — local businesses that close sales in person, ideally with an average ticket above S$30.",
       },
       {
-        q: "I'm a single small shop on a budget — is this for me?",
-        a: "Yes. DISCOVER starts from S$600/month — fix ‘being found’ first, then upgrade to BUILD and GROW as it pays off, step by step.",
+        q: "Is Foundly suitable for a single-location business with a limited budget?",
+        a: "Yes. DISCOVER starts from S$600/month — fix 'being found' first, then add BUILD and GROW as it pays off, step by step.",
       },
     ],
   },
   cta: {
-    tags: ["DISCOVER · Get discovered", "BUILD · Build great", "GROW · Get customers"],
-    heading: "Your store is great. It just hasn't been found yet.",
+    tags: ["BUILD · Build Your Presence", "DISCOVER · Get Found", "GROW · Get Customers"],
+    heading: "Your business is already worth discovering. Let's make sure customers can find it.",
     description:
-      "Book a free 30-minute Get Found audit: we'll show you exactly why customers can't find you on Google and AI search — and the first step to fix it.",
-    buttonText: "Book a Free Audit",
-    buttonHref: "mailto:hello@foundly.sg?subject=Get%20Found%20Audit",
+      "Book a free 30-minute visibility audit. We'll show you how your business currently appears across Google, Maps and AI search, where potential customers may be dropping off, and what to improve first.",
+    buttonText: "Get Your Free Visibility Audit",
+    buttonHref: "mailto:hello@foundly.sg?subject=Free%20Visibility%20Audit",
     email: "hello@foundly.sg",
     backgroundImage: "/images/cta-bg.jpg",
   },
   footer: {
     logo: "foundly",
     description:
-      "Foundly — Local Growth Studio. Helping local businesses get found. Making sure Singapore's physical stores get found, get seen, and get customers.",
+      "Foundly is a Singapore growth studio helping local businesses build a stronger digital presence, get discovered, and turn online visibility into real customers.",
     columns: [
       {
         title: "Services",
         links: [
-          { label: "DISCOVER · SEO & GEO", href: "#services" },
-          { label: "BUILD · Websites", href: "#services" },
-          { label: "GROW · Social & Acquisition", href: "#services" },
+          { label: "DISCOVER · Local SEO & AI Search", href: "#services" },
+          { label: "BUILD · Websites & Brand Presence", href: "#services" },
+          { label: "GROW · Social Media & Acquisition", href: "#services" },
         ],
       },
       {
@@ -678,14 +678,14 @@ const en: Content = {
         links: [
           { label: "About", href: "#about" },
           { label: "Pricing", href: "#pricing" },
-          { label: "Use Cases", href: "#portfolio" },
+          { label: "Success Stories", href: "#portfolio" },
           { label: "FAQ", href: "#faq" },
         ],
       },
       {
-        title: "Contact",
+        title: "Get in touch",
         links: [
-          { label: "Book a free audit", href: "#contact" },
+          { label: "Book a free visibility audit", href: "#contact" },
           { label: "hello@foundly.sg", href: "mailto:hello@foundly.sg" },
           { label: "WhatsApp +65 9000 0000", href: "#contact" },
         ],
@@ -695,11 +695,11 @@ const en: Content = {
       { iconName: "Instagram", href: "https://instagram.com/foundly.sg", label: "Instagram" },
       { iconName: "Facebook", href: "https://facebook.com/foundly.sg", label: "Facebook" },
     ],
-    newsletterHeading: "Subscribe to the Get Found Weekly",
+    newsletterHeading: "The Get Found Weekly",
     newsletterDescription:
-      "One email a week: local ranking shifts, AI-search acquisition plays, tactics you can copy-paste.",
+      "One practical email a week covering local search updates, AI-discovery opportunities and customer-acquisition ideas you can put to work.",
     newsletterButtonText: "Subscribe",
-    newsletterPlaceholder: "Your email address",
+    newsletterPlaceholder: "Email address",
     copyright: "© 2026 Foundly Pte. Ltd. · Singapore",
     credit: "Get Found. Get Customers.",
   },
