@@ -1,10 +1,11 @@
 import { } from 'react';
 import { cn } from '@/lib/utils';
 
-interface PageOverlayProps {
-  isVisible: boolean;
-}
-
+/**
+ * Page loading overlay — the FOUNDLY wordmark, where the "o" ring's
+ * lime dot orbits slowly clockwise inside the circle until the page
+ * is ready, then the overlay fades out.
+ */
 export function PageOverlay({ isVisible }: PageOverlayProps) {
   return (
     <div
@@ -13,21 +14,31 @@ export function PageOverlay({ isVisible }: PageOverlayProps) {
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       )}
     >
-      <div className="flex flex-col items-center gap-4">
-        <span className="text-3xl font-semibold tracking-tight text-exvia-black animate-pulse">
-          found<span className="relative inline-flex items-center justify-center mx-[0.03em] w-[0.8em] h-[0.8em] align-middle"><span className="absolute inset-0 rounded-full border-[0.12em] border-exvia-black/80" /><span className="w-[0.26em] h-[0.26em] rounded-full bg-exvia-blue" /></span>ndly
+      <span className="text-5xl font-semibold tracking-tight text-exvia-black select-none">
+        f
+        <span className="relative inline-flex items-center justify-center mx-[0.03em] w-[0.8em] h-[0.8em] align-middle">
+          {/* ring */}
+          <span className="absolute inset-0 rounded-full border-[0.1em] border-exvia-black/80" />
+          {/* orbiting lime dot — clockwise, slow */}
+          <span className="absolute inset-0 animate-[foundly-orbit_2.5s_linear_infinite]">
+            <span
+              className="absolute left-1/2 top-1/2 w-[0.2em] h-[0.2em] -ml-[0.1em] -mt-[0.3em] rounded-full bg-exvia-blue"
+            />
+          </span>
         </span>
-        <div className="w-24 h-0.5 bg-exvia-subtle rounded-full overflow-hidden">
-          <div className="h-full bg-exvia-black animate-[slide_1s_ease-in-out_infinite] w-1/3 rounded-full" />
-        </div>
-      </div>
+        undly
+      </span>
 
       <style>{`
-        @keyframes slide {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(400%); }
+        @keyframes foundly-orbit {
+          from { transform: rotate(0deg); }
+          to   { transform: rotate(360deg); }
         }
       `}</style>
     </div>
   );
+}
+
+interface PageOverlayProps {
+  isVisible: boolean;
 }
