@@ -69,7 +69,7 @@ export function Pricing() {
   const pricing = getPricing();
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.2 });
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation({ threshold: 0.1 });
-  const [tab, setTab] = useState<'discover' | 'build' | 'grow'>('discover');
+  const [tab, setTab] = useState<'discover' | 'build' | 'grow'>('build');
 
   // Request-offer dialog state
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -97,8 +97,8 @@ export function Pricing() {
   };
 
   const tabs = [
-    { key: 'discover' as const, label: 'DISCOVER' },
     { key: 'build' as const, label: 'BUILD' },
+    { key: 'discover' as const, label: 'DISCOVER' },
     { key: 'grow' as const, label: 'GROW' },
   ];
 
